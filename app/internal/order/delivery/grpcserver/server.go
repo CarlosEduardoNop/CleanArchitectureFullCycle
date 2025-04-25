@@ -4,7 +4,7 @@ import (
 	"google.golang.org/grpc"
 	"log"
 	"net"
-	"order/internal/order/delivery/grpcserver/order"
+	order2 "order/app/internal/order/delivery/grpcserver/order"
 )
 
 func StartGRPC() {
@@ -13,11 +13,11 @@ func StartGRPC() {
 		log.Fatalf("failed to listen: %v", err)
 	}
 
-	o := order.Server{}
+	o := order2.Server{}
 
 	grpcServer := grpc.NewServer()
 
-	order.RegisterOrderServiceServer(grpcServer, &o)
+	order2.RegisterOrderServiceServer(grpcServer, &o)
 	log.Println("gRPC server running on port 50051")
 	grpcServer.Serve(lis)
 }

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	gql "github.com/graphql-go/graphql"
 	"net/http"
-	"order/internal/order/repository/order"
+	"order/app/internal/order/repository/order"
 )
 
 func StartGraphQL() {

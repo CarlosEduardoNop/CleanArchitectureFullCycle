@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"order/internal/order/repository/order"
+	"order/app/internal/order/repository/order"
 )
 
 func StartREST() {

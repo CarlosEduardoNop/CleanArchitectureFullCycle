@@ -1,11 +1,10 @@
 package main
 
 import (
-	"order/internal/order/delivery/graphql"
-	"order/internal/order/delivery/grpcserver"
-	"order/internal/order/delivery/rest"
-
 	_ "github.com/lib/pq"
+	"order/app/internal/order/delivery/graphql"
+	"order/app/internal/order/delivery/grpcserver"
+	"order/app/internal/order/delivery/rest"
 )
 
 func main() {

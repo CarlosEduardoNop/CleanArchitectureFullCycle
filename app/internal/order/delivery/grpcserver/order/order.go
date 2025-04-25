@@ -2,7 +2,7 @@ package order
 
 import (
 	"context"
-	"order/internal/order/repository/order"
+	"order/app/internal/order/repository/order"
 )
 
 type Server struct {
