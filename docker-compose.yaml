@@ -16,7 +16,7 @@ services:
   api:
     build:
       context: .
-      dockerfile: ./.docker/api
+      dockerfile: ./.docker/api/Dockerfile
     depends_on:
       - postgres
     ports:
