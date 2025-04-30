@@ -16,8 +16,8 @@ docker compose up -d
 
 ## Serviços
 
-| Tipo     | Porta  | Endpoint                        |
-|----------|--------|---------------------------------|
-| REST     | 8080   | GET /order                      |
-| GraphQL  | 8081   | /graphql                        |
-| gRPC     | 50051  | ListOrders                      |
+| Tipo     | Porta  | Endpoint           |
+|----------|--------|--------------------|
+| REST     | 8080   | GET or POST /order |
+| GraphQL  | 8081   | /graphql           |
+| gRPC     | 50051  | ListOrders         |
