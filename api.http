@@ -1,0 +1,11 @@
+### List Orders (REST)
+GET http://localhost:8080/order
+Accept: application/json
+
+### List Orders (GraphQL)
+POST http://localhost:8081/graphql
+Content-Type: application/json
+
+{
+  "query": "{ listOrders { id item price } }"
+}
