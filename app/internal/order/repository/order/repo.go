@@ -34,3 +34,17 @@ func (r *OrderRepository) FindAll() ([]entity.Order, error) {
 	}
 	return orders, nil
 }
+
+func (r *OrderRepository) Create(o *entity.Order) error {
+	db, err := sql.Open("pgx", "host=postgres port=5432 user=root password=root dbname=order_db sslmode=disable")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	query := "INSERT INTO orders (item, price) VALUES ($1, $2) RETURNING id"
+
+	err = db.QueryRow(query, o.Item, o.Price).Scan(&o.ID)
+
+	return err
+}
