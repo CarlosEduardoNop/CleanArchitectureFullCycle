@@ -2,6 +2,15 @@
 GET http://localhost:8080/order
 Accept: application/json
 
+### Criar order
+POST http://localhost:8080/order
+Content-Type: application/json
+
+{
+  "item": "Teste123",
+  "price": 50.00
+}
+
 ### List Orders (GraphQL)
 POST http://localhost:8081/graphql
 Content-Type: application/json
