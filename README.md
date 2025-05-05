@@ -3,6 +3,10 @@
 ## Como executar
 
 1. Rode o projeto com:
+2. 
+```bash
+docker compose build
+```
 
 ```bash
 docker compose up -d
