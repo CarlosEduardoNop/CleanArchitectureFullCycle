@@ -4,13 +4,11 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	"os"
 )
 
 func CreateOrderTable() {
 	db, err := sql.Open("pgx", "host=postgres port=5432 user=root password=root dbname=order_db sslmode=disable")
-	cwd, _ := os.Getwd()
-	fmt.Println("Diretório atual:", cwd)
+
 	if err != nil {
 		log.Fatal(err)
 	}
